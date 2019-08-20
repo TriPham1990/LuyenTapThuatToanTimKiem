@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực Hành</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i < 100; i++) {
+        array.push(Math.floor(Math.random() * 100))
+    }
+    let min = array[0];
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] < min) {
+            min = array[i];
+        }
+    }
+    document.write(min + '<br>');
+    let number = parseInt(prompt("Enter the number : "));
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === number) {
+            count++;
+        }
+    }
+    document.write("number xuất hiện " + count + " lần.");
+</script>
+</body>
+</html>
